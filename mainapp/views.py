@@ -9,11 +9,12 @@ class NewsPageView(TemplateView):
     template_name = "mainapp/news.html"
 
     def get_context_data(self, **kwargs):
-        # get all previous data
+        # Get all previous data
         context = super().get_context_data(**kwargs)
-        # create your own data
+        # Create your own data
         context["news_title"] = "Громкий новостной заголовок"
-        context["news_preview"] = "Предварительное описание, которое заинтересует каждого человека"
+        context["news_preview"] = "Предварительное описание, которое заинтересует каждого"
+        context["range"] = range(5)
         return context
 
 
