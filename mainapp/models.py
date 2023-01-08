@@ -11,7 +11,7 @@ class News(models.Model):
     deleted = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return f"{self.pk} {self.title}"
+        return f"{self.pk} - {self.title}"
 
     def delete(self, *args):
         self.deleted = True
